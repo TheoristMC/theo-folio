@@ -81,7 +81,7 @@ new CardBuilder([
   {
     title: "Fletching Table",
     description:
-      "My design guess for what would Fletching Table interface would probably look like.",
+      "My design guess for what Fletching Table interface would probably look like.",
     buttonID: "fletchingTable",
     thumbnail: ButtonLinks.fletchingTable,
   },
