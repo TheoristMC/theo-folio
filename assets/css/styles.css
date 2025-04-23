@@ -1,0 +1,248 @@
+@font-face {
+  font-family: "MinecraftTen";
+  src: url("fonts/MinecraftTen.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MinecraftSeven';
+  src: url('fonts/MinecraftSeven.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+button {
+  all: unset;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #2C3930;
+}
+
+.divider {
+  background-color: #3F4F44;
+
+  width: 100%;
+  height: 3px;
+  
+  flex-shrink: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding: 20px 0;
+  gap: 20px;
+}
+
+section > img {
+  background-color: #3F4F44;
+  
+  border-radius: 8px;
+  padding: 12px;
+  
+  height: 400px;
+  width: 400px;
+}
+
+section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section > div > h1 {
+  margin: 0;
+  font-family: "MinecraftTen", Arial, Helvetica, sans-serif;
+  color: #DCD7C9;
+  font-size: 40px;
+}
+
+section > div > p {
+  background-color: #3F4F44;
+
+  color: #DCD7C9;
+  font-family: "MinecraftSeven", Arial, Helvetica, sans-serif;
+
+  border-radius: 10px;
+  padding: 12px;
+}
+
+main {
+  padding: 20px 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > h1 {
+  margin: 0 0 30px 0;
+  font-family: "MinecraftTen", Arial, Helvetica, sans-serif;
+  color: #DCD7C9;
+  font-size: 40px;
+  text-align: center;
+}
+
+main > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 12px;
+}
+
+main > div > div {
+  height: auto;
+  max-width: 290px;
+  padding: 9px;
+  border-radius: 8px;
+
+  background-color: #3F4F44;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main > div > div > h1 {
+  margin: 0;
+  font-family: "MinecraftTen", Arial, Helvetica, sans-serif;
+  color: #DCD7C9;
+  font-size: 28px;
+}
+
+main > div > div > p {
+  color: #DCD7C9;
+  font-family: "MinecraftSeven", Arial, Helvetica, sans-serif;
+  white-space: pre-line;
+}
+
+main > div > div > button {
+  margin-top: auto;
+  padding: 6px;
+  border-radius: 6px;
+
+  background-color: #697565;
+  color: #DCD7C9;
+  text-align: center;
+  font-family: "MinecraftSeven", Arial, Helvetica, sans-serif;
+
+  transition: all 0.15s ease-out;
+}
+
+main > div > div > button:hover {
+  background-color: #788673;
+}
+
+footer {
+  width: 100%;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer > p {
+  color: #DCD7C9;
+  font-family: "MinecraftSeven", Arial, Helvetica, sans-serif;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+footer > div > a {
+  height: 26px;
+  width: 26px;
+}
+
+@media (max-width: 955px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section > div > p {
+    text-align: center;
+    max-width: 400px;
+  }
+
+  section > div > h1 {
+    text-align: center;
+  }
+
+  main > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  main > div > div {
+    max-width: 400px;
+  }
+
+  main > div > div > h1 {
+    text-align: center;
+  }
+  
+  main > div > div > p {
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer > p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .divider {
+    width: 90%;
+  }
+
+  section > div {
+    align-items: center;
+  }
+
+  section > div > p {
+    width: 80%;
+  }
+
+  section > img {
+    height: 80%;
+    width: 80%;
+  }
+
+  main > div {
+    width: 90%;
+  }
+
+  footer {
+    width: 90%;
+  }
+}
+
+@media (max-width: 200px) {
+  section, main, footer, .divider {
+    display: none;
+  }
+}
