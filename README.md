@@ -17,7 +17,7 @@ Required to put all given properties here at `src/page.js` to add cards. Excludi
 }
 ```
 
-To make it interactable, you need to put a link to `CardImages` object at the same file. The key must be same as the `buttonID` you have given.
+To make it interactable, you need to put a link to `ButtonLinks` object at the same file. The key must be same as the `buttonID` you have given.
 
 ```js
 {

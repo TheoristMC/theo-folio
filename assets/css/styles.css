@@ -12,6 +12,10 @@
   font-style: normal;
 }
 
+* {
+  user-select: none;
+}
+
 button {
   all: unset;
 }
@@ -99,7 +103,7 @@ main > h1 {
 main > div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: start;
+  align-items: end;
   width: 100%;
   gap: 12px;
 }
