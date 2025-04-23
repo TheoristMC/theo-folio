@@ -12,6 +12,7 @@ new CardBuilder([
     title: "Ore-UI Forms",
     description: "UI Server Forms that are based on the modern ORE-UI style.",
     buttonID: "oreUIForms",
+    thumbnail: CardImages.oreUIForms,
   },
 ]).build();
 

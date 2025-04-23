@@ -2,15 +2,18 @@
 
 A portfolio website for my Minecraft Bedrock projects.
 
+[Click here for the website.](https://theoristmc.github.io/theo-folio/)
+
 ## Adding cards
 
-Required to put all given properties here at `src/page.js` to add cards.
+Required to put all given properties here at `src/page.js` to add cards. Excluding thumbnail, it's optional but will show if given.
 
 ```js
 {
   title: "Title",
   description: "Description here...",
   buttonID: "exampleId",
+  thumbnail: "https://picsum.photos/id/237/300/200"
 }
 ```
 

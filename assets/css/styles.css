@@ -99,6 +99,7 @@ main > h1 {
 main > div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: start;
   width: 100%;
   gap: 12px;
 }
@@ -139,6 +140,13 @@ main > div > div > button {
   font-family: "MinecraftSeven", Arial, Helvetica, sans-serif;
 
   transition: all 0.15s ease-out;
+}
+
+main > div > div > img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  max-height: 350px;
 }
 
 main > div > div > button:hover {
