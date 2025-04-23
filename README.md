@@ -10,7 +10,7 @@ Required to put all given properties here at `src/page.js` to add cards. Excludi
 
 ```js
 {
-  title: "Title",
+  title: "Title...",
   description: "Description here...",
   buttonID: "exampleId",
   thumbnail: "https://picsum.photos/id/237/300/200"
