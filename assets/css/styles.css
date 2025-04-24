@@ -149,6 +149,7 @@ main > div > div > button {
 
 main > div > div > img {
   width: 100%;
+  object-fit: contain;
   border-radius: 4px;
   margin-bottom: 16px;
   max-height: 350px;
