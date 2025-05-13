@@ -38,7 +38,7 @@ class CardBuilder {
   
       if (thumbnail) {
         const cardThumbnail = document.createElement("img");
-        cardThumbnail.src = thumbnail;
+        cardThumbnail.src = `assets/css/images/card/${thumbnail}`;
         card.appendChild(cardThumbnail);
       }
   

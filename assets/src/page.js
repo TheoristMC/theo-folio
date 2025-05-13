@@ -1,81 +1,58 @@
 import { CardBuilder } from "./cardBuilder.js";
 
 const projectCardsContainer = document.getElementById("projects-cards");
+const imageView = document.getElementById("image-view");
+const image = document.getElementById("image-view-src");
 
 // Format: ${buttonID}: ${imageSourceLink}
-const imgCardPrefix = "assets/css/images/card";
 const ButtonLinks = {
-  oreUIForm: `${imgCardPrefix}/oreUIForm.jpg`,
-  serverSelector: `${imgCardPrefix}/serverSelector.webp`,
-  blossomMenu: `${imgCardPrefix}/blossomMenu.webp`,
-  mobWatcher: "https://github.com/TheoristMC/Mob-Monitor",
-  brewingRecipes: "https://modbay.org/textures/3892-brewing-recipes-ui.html",
-  oreUIForm2: `${imgCardPrefix}/oreUIForm2.webp`,
-  shopForm: `${imgCardPrefix}/shopForm.webp`,
-  fletchingTable: `${imgCardPrefix}/fletchingTable.webp`,
-  hudFeatures: `${imgCardPrefix}/hudFeatures.png`,
+  brewing_recipes: "brewing_recipes_ui.png",
+  fletching_table_ui: "fletching_table_ui.webp",
+  form_ore_ui: "form_ore_ui.webp",
+  server_selector_ui: "server_selector_ui.webp",
+  entity_monologue_ui: "entity_monologue_ui.webp",
+  map_selector_ui: "map_selector_ui.webp",
 };
 
 new CardBuilder([
   {
-    title: "Ore-UI Forms",
-    description: "UI Server Form that is based on the modern ORE-UI style.",
-    buttonID: "oreUIForm",
-    thumbnail: ButtonLinks.oreUIForm,
+    title: "Brewing Recipes",
+    description:
+      "Adds the vanilla recipes interface to the brewing stand to help players craft different kinds of potions.",
+    buttonID: "brewing_recipes",
+    thumbnail: ButtonLinks.brewing_recipes,
   },
   {
-    title: "Menu UI",
-    description: "Main Menu interface for the server Blossom SMP.",
-    buttonID: "blossomMenu",
-    thumbnail: ButtonLinks.blossomMenu,
+    title: "Fletching Table Interface",
+    description: "My design guess for the future Fletching Table interface.",
+    buttonID: "fletching_table_ui",
+    thumbnail: ButtonLinks.fletching_table_ui,
+  },
+  {
+    title: "Server Form",
+    description:
+      "Creative interfaces that makes use of the modern ORE-UI style.",
+    buttonID: "form_ore_ui",
+    thumbnail: ButtonLinks.form_ore_ui,
   },
   {
     title: "Server Selector",
-    description:
-      "Server Selector made for a server that lets you join external servers in consoles.",
-    buttonID: "serverSelector",
-    thumbnail: ButtonLinks.serverSelector,
+    description: "Modern style interface for server selector.",
+    buttonID: "server_selector_ui",
+    thumbnail: ButtonLinks.server_selector_ui,
   },
   {
-    title: "Mob Monitor",
+    title: "Entity Monologues",
     description:
-      "It lets you watch your mobs while you are away. Although you need to find a way to load them.",
-    buttonID: "mobWatcher",
-    thumbnail: `${imgCardPrefix}/mobMonitor.png`,
+      'Vanilla NPC UI style for entity monologues. It also has "letter by letter" animation.',
+    buttonID: "entity_monologue_ui",
+    thumbnail: ButtonLinks.entity_monologue_ui,
   },
   {
-    title: "Ore-UI Forms",
-    description:
-      "A part 2 of the original.\n\nUI Server Form that is based on the modern ORE-UI style.",
-    buttonID: "oreUIForm2",
-    thumbnail: ButtonLinks.oreUIForm2,
-  },
-  {
-    title: "Brewing Recipes",
-    description:
-      "Integrated crafting-table like recipes interface to brewing stand.",
-    buttonID: "brewingRecipes",
-    thumbnail: `${imgCardPrefix}/brewingRecipes.png`,
-  },
-  {
-    title: "HUD Features",
-    description:
-      "My personal pack which is currently in-development but hoping to release it on the public soon.",
-    buttonID: "hudFeatures",
-    thumbnail: ButtonLinks.hudFeatures,
-  },
-  {
-    title: "Shop Form",
-    description: "Originally made for a commision but is discontinued.",
-    buttonID: "shopForm",
-    thumbnail: ButtonLinks.shopForm,
-  },
-  {
-    title: "Fletching Table",
-    description:
-      "My design guess for what Fletching Table interface would probably look like.",
-    buttonID: "fletchingTable",
-    thumbnail: ButtonLinks.fletchingTable,
+    title: "Map Selector Interface",
+    description: "Wooden style map-selector interface.",
+    buttonID: "map_selector_ui",
+    thumbnail: ButtonLinks.map_selector_ui,
   },
 ]).build();
 
@@ -86,6 +63,14 @@ projectCardsContainer.addEventListener("click", (ev) => {
     const imageLink = ButtonLinks[target.id];
     if (!imageLink) return;
 
-    window.open(imageLink, "_blank");
+    image.src = `assets/css/images/card/${imageLink}`;
+    imageView.style.display = "block";
   }
 });
+
+imageView.addEventListener("click", () => (imageView.style.display = "none"));
+document.addEventListener(
+  "keydown",
+  (ev) => ev.key === "Escape" && (imageView.style.display = "none")
+);
+image.addEventListener("click", (ev) => ev.stopPropagation());
