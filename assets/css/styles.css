@@ -247,6 +247,11 @@ footer > div > a {
   footer > p {
     text-align: center;
   }
+
+  #image-view > div > img {
+    object-fit: contain;
+    width: 95%;
+  }
 }
 
 @media (max-width: 430px) {
